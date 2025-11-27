@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Telegram Bot for AI Voice Match System
+Telegram Bot for Atlas Voice System
 Responds to messages using your personalized AI voice
 """
 

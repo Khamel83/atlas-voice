@@ -757,10 +757,10 @@
   },
   "update_voice_generator": {
     "status": "success",
-    "generator_path": "/Users/khamel83/dev/Speech/src/enhanced_ai_voice_generator.py"
+    "generator_path": "/Users/khamel83/dev/atlas-voice/src/enhanced_ai_voice_generator.py"
   },
   "generate_final_profile": {
     "status": "success",
-    "profile_path": "/Users/khamel83/dev/Speech/prompts/FINAL_ENHANCED_VOICE_PROFILE_4K.json"
+    "profile_path": "/Users/khamel83/dev/atlas-voice/prompts/FINAL_ENHANCED_VOICE_PROFILE_4K.json"
   }
 }

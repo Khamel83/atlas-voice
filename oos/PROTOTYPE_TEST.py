@@ -22,8 +22,8 @@ class ContentAnalysisPrototype:
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.email_path = "/Users/khamel83/Library/Mobile Documents/com~apple~CloudDocs/Code/emailprocessing/extracted_emails.csv"
         self.text_files = [
-            '/Users/khamel83/dev/Speech/data/omars_personal_letters.txt',
-            '/Users/khamel83/dev/Speech/data/speech.md'
+            '/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt',
+            '/Users/khamel83/dev/atlas-voice/data/speech.md'
         ]
 
     def test_content_analysis(self) -> Dict:
@@ -200,7 +200,7 @@ class ContentAnalysisPrototype:
 
     def save_results(self, results: Dict):
         """Save test results"""
-        results_path = Path('/Users/khamel83/dev/Speech/oos/prototype_test_results.json')
+        results_path = Path('/Users/khamel83/dev/atlas-voice/oos/prototype_test_results.json')
         with open(results_path, 'w') as f:
             json.dump(results, f, indent=2, default=str)
         print(f"📊 Results saved to: {results_path}")

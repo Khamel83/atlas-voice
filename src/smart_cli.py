@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Smart CLI for AI Voice Match
+Smart CLI for Atlas Voice
 Understands natural language requests and executes appropriate actions
 """
 
@@ -18,7 +18,7 @@ from intelligent_interface import IntelligentInterface
 @click.option('--interactive', '-i', is_flag=True, help='Start interactive mode')
 @click.option('--quiet', '-q', is_flag=True, help='Minimal output')
 def smart_cli(request, interactive, quiet):
-    """AI Voice Match - Smart Interface that understands natural requests"""
+    """Atlas Voice - Smart Interface that understands natural requests"""
 
     interface = IntelligentInterface()
 

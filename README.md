@@ -1,18 +1,18 @@
-# 🎤 AI Voice Match - Enhanced Analysis System
+# 🎤 Atlas Voice - Enhanced Analysis System
 
 **Turn any AI into your voice twin using privacy-first prompt engineering with comprehensive corpus analysis**
 
-[![Privacy First](https://img.shields.io/badge/Privacy-First-green)](https://github.com/Khamel83/voice-analysis-system#privacy)
-[![Nuclear Safe Room](https://img.shields.io/badge/Architecture-Nuclear%20Safe%20Room-blue)](https://github.com/Khamel83/voice-analysis-system#architecture)
-[![OOS Complete](https://img.shields.io/badge/OOS%20Workflow-Complete-brightgreen)](https://github.com/Khamel83/voice-analysis-system#oos-workflow)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Khamel83%2Fvoice--analysis--system-blue)](https://github.com/Khamel83/voice-analysis-system)
-[![Open Source](https://img.shields.io/badge/License-MIT-purple)](https://github.com/Khamel83/voice-analysis-system#license)
+[![Privacy First](https://img.shields.io/badge/Privacy-First-green)](https://github.com/Khamel83/atlas-voice#privacy)
+[![Nuclear Safe Room](https://img.shields.io/badge/Architecture-Nuclear%20Safe%20Room-blue)](https://github.com/Khamel83/atlas-voice#architecture)
+[![OOS Complete](https://img.shields.io/badge/OOS%20Workflow-Complete-brightgreen)](https://github.com/Khamel83/atlas-voice#oos-workflow)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Khamel83%2Fatlas--voice-blue)](https://github.com/Khamel83/atlas-voice)
+[![Open Source](https://img.shields.io/badge/License-MIT-purple)](https://github.com/Khamel83/atlas-voice#license)
 
 ---
 
 ## 🎯 What It Does
 
-AI Voice Match analyzes your writing patterns and generates custom AI prompts that make any AI (ChatGPT, Claude, etc.) sound exactly like you.
+Atlas Voice analyzes your writing patterns and generates custom AI prompts that make any AI (ChatGPT, Claude, etc.) sound exactly like you.
 
 **🔬 Enhanced Analysis**: Complete OOS workflow implementation with 104M+ character corpus analysis, topic clustering, and knowledge boundary mapping.
 
@@ -102,8 +102,8 @@ python3 src/enhanced_ai_voice_generator.py
 
 ### **Quick Install**
 ```bash
-git clone <repository>
-cd Speech
+git clone https://github.com/Khamel83/atlas-voice
+cd atlas-voice
 pip install click openai sqlite3
 export OPENROUTER_API_KEY="your_key_here"
 python3 src/main.py --help

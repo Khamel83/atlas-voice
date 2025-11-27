@@ -4,8 +4,8 @@
 
 ### **1. Clone the Repository**
 ```bash
-git clone <repository-url>
-cd Speech
+git clone https://github.com/Khamel83/atlas-voice
+cd atlas-voice
 ```
 
 ### **2. Install Dependencies**
@@ -70,7 +70,7 @@ echo "OPENROUTER_API_KEY=sk-or-..." > .env
 ## **Directory Structure**
 
 ```
-Speech/
+atlas-voice/
 ├── src/                    # Source code
 │   ├── main.py            # Main CLI interface
 │   ├── nuclear_safe_room.py # Privacy architecture

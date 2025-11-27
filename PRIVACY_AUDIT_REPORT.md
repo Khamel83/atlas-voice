@@ -18,9 +18,9 @@
    - ✅ Removed build reports with personal identifiers
 
 2. **Hardcoded Path Cleanup**
-   - ✅ Fixed `/Users/khamel83/dev/Speech/data` in `intelligent_data_processor.py`
-   - ✅ Fixed `/Users/khamel83/dev/Speech/data` in `style_analyzer.py`
-   - ✅ Fixed `/Users/khamel83/dev/Speech/prompts` in `style_analyzer.py`
+   - ✅ Fixed `/Users/khamel83/dev/atlas-voice/data` in `intelligent_data_processor.py`
+   - ✅ Fixed `/Users/khamel83/dev/atlas-voice/data` in `style_analyzer.py`
+   - ✅ Fixed `/Users/khamel83/dev/atlas-voice/prompts` in `style_analyzer.py`
    - ✅ All paths now use relative directories
 
 3. **Database File Cleanup**

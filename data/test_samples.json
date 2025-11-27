@@ -12,6 +12,6 @@
     "avg_length": 273.5,
     "min_length": 204,
     "max_length": 359,
-    "voice_profile_path": "/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt"
+    "voice_profile_path": "/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt"
   }
 }

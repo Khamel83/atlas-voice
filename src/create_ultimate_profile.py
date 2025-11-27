@@ -6,7 +6,7 @@ Create Ultimate Voice Profile from Comprehensive Analysis
 import json
 
 # Load the comprehensive analysis
-with open('/Users/khamel83/dev/Speech/data/comprehensive_linguistic_analysis.json', 'r') as f:
+with open('/Users/khamel83/dev/atlas-voice/data/comprehensive_linguistic_analysis.json', 'r') as f:
     analysis = json.load(f)
 
 metadata = analysis['metadata']
@@ -114,7 +114,7 @@ Before finalizing any text:
 """
 
 # Save the ultimate profile
-with open('/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'w') as f:
+with open('/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'w') as f:
     f.write(profile)
 
 print(f'✅ ULTIMATE VOICE PROFILE CREATED')

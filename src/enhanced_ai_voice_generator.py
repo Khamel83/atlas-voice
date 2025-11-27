@@ -69,7 +69,7 @@ Generate content that matches Omar's authentic voice patterns, topics, and knowl
             return api_key
 
         try:
-            config_path = Path('/Users/khamel83/dev/Speech/config/api_keys.json')
+            config_path = Path('/Users/khamel83/dev/atlas-voice/config/api_keys.json')
             if config_path.exists():
                 with open(config_path, 'r') as f:
                     config = json.load(f)

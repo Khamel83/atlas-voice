@@ -203,7 +203,7 @@ class OOSArchonIntegration:
             self.project_id = await self.create_project(
                 title="OOS-Archon Integration Project",
                 description="Complete integration of OOS with Archon featuring enhanced RAG, memory systems, and security remediation",
-                github_repo="https://github.com/Khamel83/voice-analysis-system"
+                github_repo="https://github.com/Khamel83/atlas-voice"
             )
 
             if self.project_id:

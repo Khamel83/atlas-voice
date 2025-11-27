@@ -113,7 +113,7 @@ EOF
 # 3. Create .env.example for API keys
 echo "🔑 Creating .env.example..."
 cat > .env.example << 'EOF'
-# AI Voice Match - Environment Variables
+# Atlas Voice - Environment Variables
 # Copy this file to .env and fill in your values
 
 # OpenRouter API Key (for testing with multiple models)
@@ -252,7 +252,7 @@ EOF
 # 5. Create enhanced README.md with privacy focus
 echo "📝 Creating enhanced README.md..."
 cat > README.md << 'EOF'
-# AI Voice Match
+# Atlas Voice
 
 > Turn any AI into your voice twin using advanced prompt engineering - privacy-first, works with any LLM
 
@@ -505,7 +505,7 @@ mkdir -p src
 cat > src/main.py << 'EOF'
 #!/usr/bin/env python3
 """
-AI Voice Match - Main CLI Interface
+Atlas Voice - Main CLI Interface
 Privacy-first voice pattern analysis and prompt generation
 """
 
@@ -520,7 +520,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 @click.group()
 @click.version_option(version="1.0.0")
 def cli():
-    """AI Voice Match - Turn any AI into your voice twin"""
+    """Atlas Voice - Turn any AI into your voice twin"""
     pass
 
 @cli.command()

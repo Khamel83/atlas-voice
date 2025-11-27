@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Voice Match - Main CLI Interface
+Atlas Voice - Main CLI Interface
 Privacy-first voice pattern analysis and prompt generation
 """
 
@@ -22,7 +22,7 @@ from intelligent_data_processor import IntelligentDataProcessor
 from voice_integration_engine import VoiceIntegrationEngine
 
 class VoiceMatchCLI:
-    """Main CLI class for AI Voice Match"""
+    """Main CLI class for Atlas Voice"""
 
     def __init__(self):
         self.data_dir = Path("data")
@@ -88,7 +88,7 @@ class VoiceMatchCLI:
 @click.group()
 @click.version_option(version="1.0.0")
 def cli():
-    """AI Voice Match - Turn any AI into your voice twin using prompt engineering"""
+    """Atlas Voice - Turn any AI into your voice twin using prompt engineering"""
     pass
 
 @cli.command()

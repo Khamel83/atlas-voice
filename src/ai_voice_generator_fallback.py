@@ -14,7 +14,7 @@ class AIVoiceGeneratorFallback:
 
     def __init__(self):
         # Load voice profile
-        with open('/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'r') as f:
+        with open('/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'r') as f:
             self.voice_profile = f.read()
 
         # Omar's linguistic patterns extracted from analysis
@@ -165,7 +165,7 @@ class AIVoiceGeneratorFallback:
 
     def save_test_data(self, test_content: List[Dict]) -> None:
         """Save test data for administration"""
-        with open('/Users/khamel83/dev/Speech/data/generated_test_content.json', 'w') as f:
+        with open('/Users/khamel83/dev/atlas-voice/data/generated_test_content.json', 'w') as f:
             json.dump(test_content, f, indent=2)
 
         print(f"💾 Generated test content saved to: data/generated_test_content.json")
@@ -174,7 +174,7 @@ class AIVoiceGeneratorFallback:
 def main():
     """Test the AI voice generator"""
     # Load real samples
-    with open('/Users/khamel83/dev/Speech/data/test_samples.json', 'r') as f:
+    with open('/Users/khamel83/dev/atlas-voice/data/test_samples.json', 'r') as f:
         test_data = json.load(f)
 
     real_samples = test_data['real_samples'][:3]  # Use first 3 for testing

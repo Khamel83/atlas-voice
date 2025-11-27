@@ -23,10 +23,10 @@ class EnhancedContentAnalyzer:
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.email_path = "/Users/khamel83/Library/Mobile Documents/com~apple~CloudDocs/Code/emailprocessing/extracted_emails.csv"
         self.text_files = [
-            '/Users/khamel83/dev/Speech/data/omars_personal_letters.txt',
-            '/Users/khamel83/dev/Speech/data/speech.md'
+            '/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt',
+            '/Users/khamel83/dev/atlas-voice/data/speech.md'
         ]
-        self.output_db = "/Users/khamel83/dev/Speech/data/enhanced_analysis.db"
+        self.output_db = "/Users/khamel83/dev/atlas-voice/data/enhanced_analysis.db"
 
     def analyze_full_corpus(self) -> Dict:
         """Complete analysis of full corpus"""
@@ -420,7 +420,7 @@ if __name__ == "__main__":
 
     # Save the enhanced prompt
     enhanced_prompt = analysis.get('generated_prompt', '')
-    prompt_path = Path('/Users/khamel83/dev/Speech/prompts/ENHANCED_VOICE_PROFILE.txt')
+    prompt_path = Path('/Users/khamel83/dev/atlas-voice/prompts/ENHANCED_VOICE_PROFILE.txt')
     with open(prompt_path, 'w') as f:
         f.write(enhanced_prompt)
 

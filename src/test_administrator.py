@@ -20,10 +20,10 @@ class TestAdministrator:
     def load_test_data(self):
         """Load real samples and generated content"""
         try:
-            with open('/Users/khamel83/dev/Speech/data/test_samples.json', 'r') as f:
+            with open('/Users/khamel83/dev/atlas-voice/data/test_samples.json', 'r') as f:
                 self.test_data = json.load(f)
 
-            with open('/Users/khamel83/dev/Speech/data/generated_test_content.json', 'r') as f:
+            with open('/Users/khamel83/dev/atlas-voice/data/generated_test_content.json', 'r') as f:
                 self.generated_content = json.load(f)
 
             print("✅ Test data loaded successfully")
@@ -135,10 +135,10 @@ Good luck!"""
 
     def save_test(self, test_data: Dict) -> str:
         """Save the test for later administration"""
-        filename = f"/Users/khamel83/dev/Speech/tests/authenticity_test_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        filename = f"/Users/khamel83/dev/atlas-voice/tests/authenticity_test_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
         # Create tests directory if it doesn't exist
-        Path('/Users/khamel83/dev/Speech/tests').mkdir(exist_ok=True)
+        Path('/Users/khamel83/dev/atlas-voice/tests').mkdir(exist_ok=True)
 
         with open(filename, 'w') as f:
             json.dump(test_data, f, indent=2)

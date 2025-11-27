@@ -14,8 +14,8 @@ class EnhancedVoiceIntegrator:
     """Integrates enhanced analysis with voice generation"""
 
     def __init__(self):
-        self.analysis_db = "/Users/khamel83/dev/Speech/data/enhanced_analysis.db"
-        self.enhanced_prompt_path = "/Users/khamel83/dev/Speech/prompts/ENHANCED_VOICE_PROFILE.txt"
+        self.analysis_db = "/Users/khamel83/dev/atlas-voice/data/enhanced_analysis.db"
+        self.enhanced_prompt_path = "/Users/khamel83/dev/atlas-voice/prompts/ENHANCED_VOICE_PROFILE.txt"
 
         # Load enhanced prompt
         try:
@@ -76,7 +76,7 @@ class EnhancedVoiceIntegrator:
         enhanced_generator_code = self._create_enhanced_generator_code()
 
         # Save enhanced generator
-        generator_path = "/Users/khamel83/dev/Speech/src/enhanced_ai_voice_generator.py"
+        generator_path = "/Users/khamel83/dev/atlas-voice/src/enhanced_ai_voice_generator.py"
         with open(generator_path, 'w') as f:
             f.write(enhanced_generator_code)
 
@@ -115,7 +115,7 @@ class EnhancedAIVoiceGenerator:
             return api_key
 
         try:
-            config_path = Path('/Users/khamel83/dev/Speech/config/api_keys.json')
+            config_path = Path('/Users/khamel83/dev/atlas-voice/config/api_keys.json')
             if config_path.exists():
                 with open(config_path, 'r') as f:
                     config = json.load(f)
@@ -222,7 +222,7 @@ if __name__ == "__main__":
         }
 
         # Save final profile
-        final_profile_path = "/Users/khamel83/dev/Speech/prompts/FINAL_ENHANCED_VOICE_PROFILE_4K.json"
+        final_profile_path = "/Users/khamel83/dev/atlas-voice/prompts/FINAL_ENHANCED_VOICE_PROFILE_4K.json"
         with open(final_profile_path, 'w') as f:
             json.dump(final_profile, f, indent=2)
 
@@ -264,7 +264,7 @@ if __name__ == "__main__":
 
     def _save_integration_report(self, integration: Dict):
         """Save integration report"""
-        report_path = "/Users/khamel83/dev/Speech/oos/INTEGRATION_REPORT.json"
+        report_path = "/Users/khamel83/dev/atlas-voice/oos/INTEGRATION_REPORT.json"
         with open(report_path, 'w') as f:
             json.dump(integration, f, indent=2, default=str)
 

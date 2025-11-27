@@ -20,8 +20,8 @@ class ComprehensiveVoiceAnalyzer:
     def load_all_data_sources(self) -> Dict:
         """Load data from all sources"""
         data_sources = {
-            'personal_letters': self._load_text_file('/Users/khamel83/dev/Speech/data/omars_personal_letters.txt'),
-            'speech_data': self._load_text_file('/Users/khamel83/dev/Speech/data/speech.md'),
+            'personal_letters': self._load_text_file('/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt'),
+            'speech_data': self._load_text_file('/Users/khamel83/dev/atlas-voice/data/speech.md'),
             'email_data': self._get_email_stats_from_db()
         }
 
@@ -282,7 +282,7 @@ def main():
 
     if profile:
         # Save the profile
-        with open('/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE.txt', 'w') as f:
+        with open('/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE.txt', 'w') as f:
             f.write(profile)
 
         print(f"\n✅ Ultimate voice profile saved to: prompts/OMARS_ULTIMATE_VOICE_PROFILE.txt")

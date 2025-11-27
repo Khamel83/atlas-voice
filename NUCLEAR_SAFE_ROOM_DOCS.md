@@ -162,7 +162,7 @@ User Data (emails, docs, chats)
 ```bash
 # Install and run locally
 git clone <repository>
-cd Speech
+cd atlas-voice
 python3 src/main.py nuclear-process /path/to/data
 ```
 

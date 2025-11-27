@@ -20,7 +20,7 @@ python3 update_oos.py
 
 ```bash
 # From your Atlas project directory:
-python3 /Users/khamel83/dev/Speech/update_oos.py --project .
+python3 /Users/khamel83/dev/atlas-voice/update_oos.py --project .
 ```
 
 ## **What It Does:**

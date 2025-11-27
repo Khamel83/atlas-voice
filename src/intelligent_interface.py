@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Intelligent Interface for AI Voice Match
+Intelligent Interface for Atlas Voice
 Understands natural language requests and executes appropriate actions
 """
 
@@ -369,7 +369,7 @@ class IntelligentInterface:
     def _handle_help(self, context: Dict) -> str:
         """Handle help request"""
         return """
-🤖 AI Voice Match - Intelligent Interface
+🤖 Atlas Voice - Intelligent Interface
 
 I can understand natural requests like:
 
@@ -425,7 +425,7 @@ I can understand natural requests like:
 
     def interactive_session(self):
         """Start an interactive session with the user"""
-        print("🤖 AI Voice Match - Intelligent Interface")
+        print("🤖 Atlas Voice - Intelligent Interface")
         print("💬 Ask me anything naturally! Type 'quit' to exit.")
         print("=" * 50)
 

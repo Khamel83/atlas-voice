@@ -164,7 +164,7 @@ Technical depth: Accessible explanations with moderate technical detail
 ---
 
 **Project Lead**: Omar (khamel83)
-**Repository**: https://github.com/Khamel83/voice-analysis-system
+**Repository**: https://github.com/Khamel83/atlas-voice
 **Last Updated**: 2025-09-28
 **Next Review**: Weekly sprint updates
 

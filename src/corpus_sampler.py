@@ -14,10 +14,10 @@ class CorpusSampler:
     """Samples from the full analyzed corpus using multiple data sources"""
 
     def __init__(self):
-        self.db_path = '/Users/khamel83/dev/Speech/data/room_two_database/speech_patterns.db'
+        self.db_path = '/Users/khamel83/dev/atlas-voice/data/room_two_database/speech_patterns.db'
         self.text_files = [
-            '/Users/khamel83/dev/Speech/data/omars_personal_letters.txt',
-            '/Users/khamel83/dev/Speech/data/speech.md'
+            '/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt',
+            '/Users/khamel83/dev/atlas-voice/data/speech.md'
         ]
 
     def get_corpus_stats(self) -> Dict:

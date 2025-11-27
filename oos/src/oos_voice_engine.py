@@ -14,7 +14,7 @@ from dataclasses import dataclass, asdict
 from enum import Enum
 
 # Add voice profile path
-sys.path.append('/Users/khamel83/dev/Speech/voice_profile/src')
+sys.path.append('/Users/khamel83/dev/atlas-voice/voice_profile/src')
 
 try:
     from comprehensive_analyzer import ComprehensiveAnalyzer
@@ -62,7 +62,7 @@ class VoiceProfileData:
 class OOSVoiceEngine:
     """Core voice engine for OOS integration"""
 
-    def __init__(self, voice_profile_path: str = "/Users/khamel83/dev/Speech/voice_profile"):
+    def __init__(self, voice_profile_path: str = "/Users/khamel83/dev/atlas-voice/voice_profile"):
         self.voice_profile_path = voice_profile_path
         self.active_profile = VoiceProfile.OMAR_BASE
         self.analyzer = None

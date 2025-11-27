@@ -423,9 +423,9 @@ Rewritten version:"""
 def main():
     """Main testing execution"""
     # Paths
-    reference_analysis = "/Users/khamel83/dev/Speech/data/final_comprehensive_analysis.json"
-    original_letters = "/Users/khamel83/dev/Speech/data/omars_personal_letters.txt"
-    style_prompt = "/Users/khamel83/dev/Speech/prompts/final_style_preservation_prompt.txt"
+    reference_analysis = "/Users/khamel83/dev/atlas-voice/data/final_comprehensive_analysis.json"
+    original_letters = "/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt"
+    style_prompt = "/Users/khamel83/dev/atlas-voice/prompts/final_style_preservation_prompt.txt"
 
     # Create tester
     tester = LetterComparisonTester(reference_analysis, original_letters)
@@ -435,7 +435,7 @@ def main():
 
     if results:
         # Save results
-        output_path = "/Users/khamel83/dev/Speech/tests/authenticity_test_results.json"
+        output_path = "/Users/khamel83/dev/atlas-voice/tests/authenticity_test_results.json"
         tester.save_test_results(results, output_path)
 
         return results

@@ -17,8 +17,8 @@ class RichCorpusSampler:
     def __init__(self):
         self.email_path = "/Users/khamel83/Library/Mobile Documents/com~apple~CloudDocs/Code/emailprocessing/extracted_emails.csv"
         self.text_files = [
-            '/Users/khamel83/dev/Speech/data/omars_personal_letters.txt',
-            '/Users/khamel83/dev/Speech/data/speech.md'
+            '/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt',
+            '/Users/khamel83/dev/atlas-voice/data/speech.md'
         ]
         self.status_path = "/Users/khamel83/Library/CloudStorage/GoogleDrive-zoheri@gmail.com/My Drive/Dev/Atlas/inputs/saved_emails/email_status.json"
 

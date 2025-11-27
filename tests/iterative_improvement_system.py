@@ -29,7 +29,7 @@ class IterativeImprovementEngine:
         self.improvement_history = []
 
         # Paths
-        self.base_dir = Path("/Users/khamel83/dev/Speech")
+        self.base_dir = Path("/Users/khamel83/dev/atlas-voice")
         self.data_dir = self.base_dir / "data"
         self.prompts_dir = self.base_dir / "prompts"
         self.tests_dir = self.base_dir / "tests"

@@ -15,8 +15,8 @@ class ContentSampler:
 
     def __init__(self):
         self.data_sources = [
-            '/Users/khamel83/dev/Speech/data/omars_personal_letters.txt',
-            '/Users/khamel83/dev/Speech/data/speech.md'
+            '/Users/khamel83/dev/atlas-voice/data/omars_personal_letters.txt',
+            '/Users/khamel83/dev/atlas-voice/data/speech.md'
         ]
         self.email_processor = None
 
@@ -177,11 +177,11 @@ class ContentSampler:
                 'avg_length': sum(len(s) for s in real_samples) / len(real_samples),
                 'min_length': min(len(s) for s in real_samples),
                 'max_length': max(len(s) for s in real_samples),
-                'voice_profile_path': '/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt'
+                'voice_profile_path': '/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt'
             }
         }
 
-        with open('/Users/khamel83/dev/Speech/data/test_samples.json', 'w') as f:
+        with open('/Users/khamel83/dev/atlas-voice/data/test_samples.json', 'w') as f:
             json.dump(test_data, f, indent=2)
 
         print(f"💾 Saved test data to: data/test_samples.json")

@@ -250,7 +250,7 @@ def main():
         project_id = archon.create_project(
             title="OOS Voice Analysis System",
             description="Voice pattern extraction and AI personalization system",
-            github_repo="https://github.com/Khamel83/voice-analysis-system"
+            github_repo="https://github.com/Khamel83/atlas-voice"
         )
 
         if project_id:

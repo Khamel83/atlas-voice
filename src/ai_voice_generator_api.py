@@ -15,7 +15,7 @@ class AIVoiceGeneratorAPI:
 
     def __init__(self):
         # Load voice profile
-        with open('/Users/khamel83/dev/Speech/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'r') as f:
+        with open('/Users/khamel83/dev/atlas-voice/prompts/OMARS_ULTIMATE_VOICE_PROFILE_COMPLETE.txt', 'r') as f:
             self.voice_profile = f.read()
 
         # OpenRouter API configuration
@@ -33,7 +33,7 @@ class AIVoiceGeneratorAPI:
             return api_key
 
         # Try config file
-        config_path = Path('/Users/khamel83/dev/Speech/config/api_keys.json')
+        config_path = Path('/Users/khamel83/dev/atlas-voice/config/api_keys.json')
         if config_path.exists():
             with open(config_path, 'r') as f:
                 config = json.load(f)

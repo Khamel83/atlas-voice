@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AI Voice Match - Simple Entry Point
+Atlas Voice - Simple Entry Point
 Just run this and tell me what you want to do!
 """
 
@@ -14,7 +14,7 @@ from intelligent_interface import IntelligentInterface
 
 def main():
     """Main entry point - just ask naturally!"""
-    print("🤖 AI Voice Match - Smart Interface")
+    print("🤖 Atlas Voice - Smart Interface")
     print("=" * 50)
     print("💬 I understand natural requests! Just tell me what you want.")
     print("   Examples:")

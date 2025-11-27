@@ -45,8 +45,8 @@ def generate_ultimate_prompt():
     prompt = system.create_style_prompt(analysis, target_length=4000)
 
     # Save results
-    final_prompt_path = "/Users/khamel83/dev/Speech/FINAL_4000_TOKEN_PROMPT.txt"
-    final_analysis_path = "/Users/khamel83/dev/Speech/FINAL_COMPLETE_ANALYSIS.json"
+    final_prompt_path = "/Users/khamel83/dev/atlas-voice/FINAL_4000_TOKEN_PROMPT.txt"
+    final_analysis_path = "/Users/khamel83/dev/atlas-voice/FINAL_COMPLETE_ANALYSIS.json"
 
     with open(final_prompt_path, 'w') as f:
         f.write(prompt)

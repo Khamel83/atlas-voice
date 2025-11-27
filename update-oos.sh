@@ -33,10 +33,10 @@ if [ ! -f "update_oos.py" ]; then
             echo "💡 Copying from local OOS installation..."
 
             # Try to find local OOS installation
-            if [ -f "../Speech/update_oos.py" ]; then
-                cp "../Speech/update_oos.py" .
-            elif [ -f "../../Speech/update_oos.py" ]; then
-                cp "../../Speech/update_oos.py" .
+            if [ -f "../atlas-voice/update_oos.py" ]; then
+                cp "../atlas-voice/update_oos.py" .
+            elif [ -f "../../atlas-voice/update_oos.py" ]; then
+                cp "../../atlas-voice/update_oos.py" .
             else
                 echo "❌ Could not find OOS updater"
                 echo "💡 Please ensure OOS source is available"

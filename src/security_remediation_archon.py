@@ -54,7 +54,7 @@ class SecurityRemediationArchon:
         self.project_id = await self.integration.create_project(
             title="OOS-Archon Security Remediation Project",
             description="Comprehensive security hardening of the OOS-Archon integrated system based on security review findings. Implements all research learnings including enhanced RAG, memory systems, and parallel agent architecture.",
-            github_repo="https://github.com/Khamel83/voice-analysis-system"
+            github_repo="https://github.com/Khamel83/atlas-voice"
         )
 
         if not self.project_id:

@@ -1,4 +1,4 @@
-# 🚀 AI Voice Match - Quick Start Guide
+# 🚀 Atlas Voice - Quick Start Guide
 
 ## **What This Does**
 
