@@ -1,297 +1,417 @@
-# 🎤 Atlas Voice - Enhanced Analysis System
+# 🎤 Atlas Voice
 
-**Turn any AI into your voice twin using privacy-first prompt engineering with comprehensive corpus analysis**
+**Generate AI system prompts from your writing patterns**
 
-[![Privacy First](https://img.shields.io/badge/Privacy-First-green)](https://github.com/Khamel83/atlas-voice#privacy)
-[![Nuclear Safe Room](https://img.shields.io/badge/Architecture-Nuclear%20Safe%20Room-blue)](https://github.com/Khamel83/atlas-voice#architecture)
-[![OOS Complete](https://img.shields.io/badge/OOS%20Workflow-Complete-brightgreen)](https://github.com/Khamel83/atlas-voice#oos-workflow)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Khamel83%2Fatlas--voice-blue)](https://github.com/Khamel83/atlas-voice)
-[![Open Source](https://img.shields.io/badge/License-MIT-purple)](https://github.com/Khamel83/atlas-voice#license)
+Turn any AI (Claude, ChatGPT, Gemini) into your voice twin using privacy-first prompt engineering.
+
+[![Privacy First](https://img.shields.io/badge/Privacy-First-green)](#privacy)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org)
+[![MIT License](https://img.shields.io/badge/License-MIT-purple)](#license)
 
 ---
 
 ## 🎯 What It Does
 
-Atlas Voice analyzes your writing patterns and generates custom AI prompts that make any AI (ChatGPT, Claude, etc.) sound exactly like you.
+Atlas Voice analyzes your writing and generates custom AI prompts that make any AI sound exactly like you.
 
-**🔬 Enhanced Analysis**: Complete OOS workflow implementation with 104M+ character corpus analysis, topic clustering, and knowledge boundary mapping.
+**3-Step Process:**
+1. **Import** your emails, documents, or text files
+2. **Analyze** your linguistic patterns (sentence structure, vocabulary, style)
+3. **Generate** a custom system prompt for Claude, ChatGPT, or any AI
 
-**🛡️ Privacy-first architecture**: Your original content is never stored, only linguistic patterns are extracted.
-
-**✅ Production Ready**: Complete integration with enhanced AI voice generation and knowledge boundary protection.
-
-**🎯 Current Goal**: "Here's my data, give me a system prompt that makes AI sound like me but as smart as GPT-5"
+**Privacy Guarantee:** Your original content is NEVER stored. Only linguistic patterns are extracted.
 
 ---
 
-## 🚀 Get Started in 5 Minutes
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
-# 1. Process your data (emails, chats, documents)
-python3 src/main.py nuclear-process /path/to/your/data
+# Clone the repository
+git clone https://github.com/Khamel83/atlas-voice.git
+cd atlas-voice
 
-# 2. Generate your enhanced voice prompt
-python3 oos/ENHANCED_VOICE_INTEGRATOR_SIMPLE.py
+# Install dependencies
+pip install -e .
 
-# 3. Use your enhanced voice with any AI!
-python3 src/enhanced_ai_voice_generator.py
+# Or with development dependencies
+pip install -e ".[dev]"
 ```
 
----
+### 3-Step Usage
 
-## 🏢 Nuclear Safe Room Architecture
+```bash
+# 1. Import your writing
+atlas-voice import /path/to/your/emails.csv --type email --name "My Professional Voice"
 
-**Industry-leading privacy protection:**
+# 2. Pattern analysis happens automatically during import
 
-- **🚪 Room One**: Processes your data (temporary)
-- **🔐 Airlock**: Validates and secures transfer
-- **🚪 Room Two**: Stores ONLY linguistic patterns
+# 3. Generate your prompt
+atlas-voice generate <pattern-id> --context professional --output my_voice_prompt.txt
+```
 
-**Zero original content retention** - complete privacy by design.
+### Or Use the Web Interface
 
----
+```bash
+atlas-voice serve
 
-## ✨ Key Features
-
-### **🎤 Voice Analysis**
-- Function word frequencies
-- Sentence structure patterns
-- Vocabulary complexity metrics
-- Style markers (casual vs formal)
-- Personal phrase patterns
-
-### **🧠 Intelligent Processing**
-- Handles any file format automatically
-- LLM-powered format detection
-- Processes millions of words
-- Extracts patterns, not content
-
-### **🔒 Privacy Guarantees**
-- Nuclear safe room architecture
-- No original content storage
-- Complete user control
-- Audit logging and compliance
-
-### **🎛️ Natural Interface**
-- Smart natural language commands
-- Interactive voice assistant
-- Privacy dashboard
-- Data source management
+# Open http://localhost:8000 in your browser
+# Upload files → Generate prompt → Copy to clipboard
+```
 
 ---
 
 ## 📊 Supported Data Sources
 
-**✅ All Formats:**
-- Emails (.eml, .mbox)
-- Documents (.txt, .md, .docx)
-- Spreadsheets (.csv, .xlsx)
-- Chat logs (.json, .txt)
-- Social media exports
-- Any text-containing files
-
-**📈 Scale:**
-- Small datasets (100 words)
-- Large datasets (millions of words)
-- Batch processing
-- Memory efficient
+- **Email CSV** (Gmail export, Outlook, etc.)
+- **Text files** (.txt, .md)
+- **JSON** (chat logs, message exports)
+- **Directories** (batch import)
 
 ---
 
-## 🛠️ Installation
+## 🎛️ CLI Commands
 
-### **Quick Install**
+### Import & Analyze
+
 ```bash
-git clone https://github.com/Khamel83/atlas-voice
-cd atlas-voice
-pip install click openai sqlite3
-export OPENROUTER_API_KEY="your_key_here"
-python3 src/main.py --help
+# Import a single file
+atlas-voice import emails.csv --type email
+
+# Import a directory
+atlas-voice import /path/to/documents --type text
+
+# Custom naming
+atlas-voice import data.csv --name "Work Voice" --description "Professional emails 2020-2024"
 ```
 
-### **Detailed Setup**
-See [SETUP.md](SETUP.md) for complete installation instructions.
+### View Patterns
 
----
-
-## 🎯 Usage Examples
-
-### **Professional Voice**
 ```bash
-# Process work emails
-python3 src/main.py nuclear-process ~/work/emails
+# List all voice patterns
+atlas-voice list-patterns
 
-# Generate professional voice
-python3 src/main.py generate-voice-prompt
-
-# Use with AI for business communication
+# Show detailed pattern information
+atlas-voice show-pattern <pattern-id>
 ```
 
-### **Creative Writing Voice**
+### Generate Prompts
+
 ```bash
-# Process creative writing
-python3 src/main.py nuclear-process ~/writing/projects
+# Generate with context
+atlas-voice generate <pattern-id> --context professional
+atlas-voice generate <pattern-id> --context casual
+atlas-voice generate <pattern-id> --context creative
+atlas-voice generate <pattern-id> --context technical
 
-# Generate creative voice profile
-python3 src/main.py generate-voice-prompt --output-dir creative_profiles
-
-# Write stories in your unique style
+# Save to file
+atlas-voice generate <pattern-id> --output my_prompt.txt
 ```
 
-### **Social Media Voice**
+### Manage Prompts
+
 ```bash
-# Process social media content
-python3 src/main.py nuclear-process ~/social/exports
+# List generated prompts
+atlas-voice list-prompts
 
-# Generate conversational voice
-python3 src/main.py generate-voice-prompt
-
-# Create content that sounds like you
+# Export a prompt
+atlas-voice export-prompt <prompt-id> --output prompt.txt
 ```
 
----
+### Privacy
 
-## 🎛️ Commands
-
-### **Smart Interface (Natural Language)**
 ```bash
-python3 src/main.py smart "analyze my emails and create my voice profile"
-python3 src/main.py smart --interactive
+# View privacy report
+atlas-voice privacy-check
+
+# Clear temporary import files
+atlas-voice clear-imports
 ```
 
-### **Core Processing**
-```bash
-python3 src/main.py nuclear-process /path/to/data --cleanup-after
-python3 src/main.py generate-voice-prompt
-python3 src/main.py voice-profiles
-```
+### Web Interface
 
-### **Privacy Management**
 ```bash
-python3 src/main.py privacy-dashboard
-python3 src/main.py data-sources
-python3 src/main.py privacy-check
-```
+# Start web server
+atlas-voice serve
 
-### **Profile Management**
-```bash
-python3 src/main.py show-prompt profiles/voice_profile.txt
-python3 src/main.py delete-profile profile_name
-python3 src/main.py export-prompt profile_name
+# Custom host/port
+atlas-voice serve --host 0.0.0.0 --port 3000
 ```
 
 ---
 
 ## 🔒 Privacy Features
 
-### **Nuclear Safe Room**
-- **Room One**: Temporary data processing
-- **Airlock**: Cryptographic validation
-- **Room Two**: Clean pattern storage
+### What We Store
 
-### **Data Minimization**
-- Only linguistic patterns extracted
-- No content retention
-- Statistical analysis only
-- Complete deletion capabilities
+- Word frequencies (e.g., "the" appears 3.2%)
+- Sentence length averages
+- Common phrases and patterns
+- Style markers (casual/formal indicators)
 
-### **User Control**
-- Configurable retention policies
-- Automatic cleanup options
-- Export and backup controls
-- Audit trail logging
+### What We DON'T Store
 
----
+- ❌ Original text content
+- ❌ Personal information
+- ❌ Email addresses
+- ❌ Actual messages or documents
 
-## 🏗️ Architecture
+### How It Works
 
-```
-User Data (emails, docs, chats)
-          ↓
-    🚪 ROOM ONE
-    • Process all formats
-    • Extract patterns only
-    • Calculate checksums
-          ↓
-    🔐 AIRLOCK
-    • Validate integrity
-    • Verify completeness
-    • Log transfer
-          ↓
-    🚪 ROOM TWO
-    • Store clean patterns
-    • No source data
-    • Ready for analysis
-          ↓
-    🎤 YOUR VOICE PROMPT
-    • Use with any AI
-    • Sound like yourself
-    • Privacy guaranteed
-```
+1. **Import:** Temporarily load your data
+2. **Analyze:** Extract linguistic patterns only
+3. **Store:** Save patterns to local SQLite database
+4. **Delete:** Remove original content immediately
+
+**Result:** Privacy-preserving voice analysis. No original content ever persisted.
+
+Run `atlas-voice privacy-check` to see exactly what's stored.
 
 ---
 
-## 📈 Requirements
+## 📖 How It Works
 
-- **Python 3.8+**
-- **OpenRouter API Key** (free tier available)
-- **Your writing data** (emails, chats, documents)
+### Voice Pattern Analysis
 
----
+Atlas Voice extracts:
 
-## 📚 Documentation
+1. **Statistical Patterns**
+   - Average sentence length
+   - Vocabulary richness
+   - Word length distribution
 
-- [QUICK_START.md](QUICK_START.md) - Get started in 5 minutes
-- [SETUP.md](SETUP.md) - Detailed installation guide
-- [NUCLEAR_SAFE_ROOM_DOCS.md](NUCLEAR_SAFE_ROOM_DOCS.md) - Privacy architecture
-- [PRIVACY_AUDIT_REPORT.md](PRIVACY_AUDIT_REPORT.md) - Security audit
+2. **Function Words**
+   - High-frequency words like "I", "you", "the", "to"
+   - Your personal usage patterns
+
+3. **Style Markers**
+   - Casual phrases ("actually", "basically", "you know")
+   - Formal phrases ("however", "therefore", "consequently")
+   - Personal markers ("I think", "in my opinion")
+   - Technical terms (if applicable)
+
+4. **Sentence Starters**
+   - How you typically begin sentences
+   - Common opening patterns
+
+### Prompt Generation
+
+The generator creates a structured system prompt with:
+
+- **Writing Style**: Tone, sentence length, vocabulary
+- **Language Patterns**: Characteristic words and phrases
+- **Communication Approach**: Personal, direct, collaborative styles
+- **Context Guidance**: Tailored for professional, casual, creative, or technical use
+- **Quality Checklist**: Verification points for AI consistency
 
 ---
 
 ## 🧪 Testing
 
+### Run Tests
+
 ```bash
-# Run privacy checks
-python3 src/main.py privacy-check
+# Run all tests
+pytest
 
-# Test with demo data
-python3 src/nuclear_safe_room.py
+# Run with coverage
+pytest --cov=atlas_voice --cov-report=html
 
-# Smart interface test
-python3 src/main.py smart "test the system"
+# Run specific test
+pytest tests/test_analyzer.py
+```
+
+### Real Data Scale Testing
+
+The project includes a critical test that validates voice analysis at different time scales:
+
+```bash
+# Test with real email data (if available)
+pytest tests/test_real_data_scale.py -v
+```
+
+This test compares voice patterns extracted from:
+- 1 week of writing
+- 1 month of writing
+- 1 year of writing
+- 5 years of writing
+- 20 years of writing (all data)
+
+**Key Question:** Does 20 years of data produce significantly better results than 1 month?
+
+Results show whether you need extensive data or if smaller samples are sufficient.
+
+---
+
+## 🏗️ Project Structure
+
+```
+atlas-voice/
+├── atlas_voice/
+│   ├── models/          # Data models (VoicePattern, VoicePrompt)
+│   ├── services/        # Business logic (import, analyze, generate)
+│   ├── api/             # FastAPI web application
+│   ├── cli/             # Click CLI commands
+│   └── storage/         # SQLite database layer
+├── tests/               # Test suite
+├── web/                 # HTML/CSS/JS frontend
+├── data/                # Local data (gitignored)
+│   ├── atlas_voice.db   # SQLite database
+│   └── imports/         # Temporary import directory
+├── pyproject.toml       # Project configuration
+└── README.md            # This file
 ```
 
 ---
 
-## 🌐 Deployment Ready
+## 🌐 Web API
 
-**Web application ready:**
-- No persistent source data
-- Clean database architecture
-- Environment variable configuration
-- Privacy controls built-in
+If you want to integrate Atlas Voice into your own application:
 
-**Vercel/Netlify compatible:**
-- Serverless architecture
-- API key management
-- Scalable processing
-- Privacy compliance
+### Endpoints
+
+```
+GET  /health                    - Health check
+GET  /                          - Web interface
+
+POST /api/import                - Upload and analyze file
+GET  /api/patterns              - List all patterns
+GET  /api/patterns/{id}         - Get pattern details
+POST /api/generate              - Generate prompt from pattern
+GET  /api/prompts               - List all prompts
+GET  /api/prompts/{id}          - Get prompt details
+GET  /api/prompts/{id}/download - Download prompt as .txt
+GET  /api/privacy               - Privacy information
+DELETE /api/patterns/{id}       - Delete pattern
+```
+
+### Example API Usage
+
+```python
+import requests
+
+# Import file
+with open('emails.csv', 'rb') as f:
+    response = requests.post('http://localhost:8000/api/import',
+        files={'file': f},
+        data={'name': 'My Voice', 'file_type': 'email'}
+    )
+pattern_id = response.json()['pattern_id']
+
+# Generate prompt
+response = requests.post('http://localhost:8000/api/generate',
+    data={'pattern_id': pattern_id, 'context': 'professional'}
+)
+prompt = response.json()['prompt_text']
+
+# Use with Claude/ChatGPT
+print(prompt)
+```
+
+---
+
+## 🎨 Example Output
+
+Here's what a generated prompt looks like:
+
+```
+You are writing in a specific person's voice. Follow these patterns closely:
+
+## WRITING STYLE
+- Tone: balanced between formal and casual
+- Average sentence length: 17.4 words
+- Vocabulary: Clear and concise
+
+## SENTENCE STRUCTURE
+- Average 17.4 words per sentence
+- Common sentence starters: i think, let's, what, we should, the
+
+## LANGUAGE PATTERNS
+- Frequently uses: i, to, the, and, you, we, this
+- Personal phrases: i think, i would say, in my opinion
+- Casual expressions: actually, basically, you know, i mean
+
+## COMMUNICATION APPROACH
+- Uses first person ('I think', 'I would') to express opinions clearly
+- Directly engages the reader with 'you'
+- Uses 'we' for collaborative thinking
+- Asks questions to drive thinking forward
+
+## QUALITY CHECKLIST
+Before responding, verify:
+- ✓ Sentences average ~17 words with natural flow
+- ✓ Uses characteristic function words naturally
+- ✓ Maintains balanced between formal and casual tone
+- ✓ Sounds like something this person would actually say
+
+_Based on analysis of 8,621,385 words from 18,147 professional emails_
+```
+
+---
+
+## 🔧 Configuration
+
+Create a `.env` file (optional):
+
+```bash
+# Database path (default: data/atlas_voice.db)
+DATABASE_PATH=data/atlas_voice.db
+
+# Temporary import directory (default: data/imports)
+TEMP_IMPORT_DIR=data/imports
+
+# Log level (default: INFO)
+LOG_LEVEL=INFO
+
+# Web server settings
+WEB_HOST=127.0.0.1
+WEB_PORT=8000
+```
+
+---
+
+## 🚀 Deployment
+
+### Local (Default)
+
+```bash
+atlas-voice serve
+# Access at http://localhost:8000
+```
+
+### Homelab / VM
+
+```bash
+# Install as systemd service
+sudo cp scripts/atlas-voice.service /etc/systemd/system/
+sudo systemctl enable atlas-voice
+sudo systemctl start atlas-voice
+
+# Expose via Tailscale
+tailscale serve https / http://localhost:8000
+# Access at https://hostname.your-tailnet.ts.net
+```
+
+### Production Considerations
+
+- Use environment variables for configuration
+- Set up proper logging
+- Configure CORS if needed
+- Use reverse proxy (Caddy/Nginx) for SSL
+- Back up the SQLite database regularly
 
 ---
 
 ## 🤝 Contributing
 
+Contributions welcome! Please:
+
 1. Fork the repository
 2. Create a feature branch
 3. Add tests for new functionality
-4. Ensure privacy compliance
+4. Ensure tests pass (`pytest`)
 5. Submit a pull request
-
-**Privacy requirements:**
-- No user data retention
-- Clean architecture
-- Audit logging
-- Security best practices
 
 ---
 
@@ -301,24 +421,21 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 Links
-
-- [Documentation](https://github.com/your-repo/docs)
-- [Privacy Policy](https://github.com/your-repo/privacy)
-- [Issues](https://github.com/your-repo/issues)
-- [Discussions](https://github.com/your-repo/discussions)
-
----
-
 ## 🙏 Acknowledgments
 
+- Built with FastAPI, Click, and modern Python
 - Privacy-first architecture inspired by security best practices
-- LLM integration for intelligent format detection
-- OpenAI and OpenRouter for AI capabilities
-- Community feedback and testing
+- Linguistic analysis based on NLP fundamentals
 
 ---
 
-**🎤 The future of AI communication sounds like you.** ✨
+## 📬 Support
+
+- **Issues**: [GitHub Issues](https://github.com/Khamel83/atlas-voice/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Khamel83/atlas-voice/discussions)
+
+---
+
+**🎤 Make AI sound like you. Privately.** ✨
 
 Made with ❤️ for privacy and authenticity.

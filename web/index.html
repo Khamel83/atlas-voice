@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas Voice - AI Voice Profile Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 Atlas Voice</h1>
+            <p class="tagline">Generate AI voice prompts from your writing patterns</p>
+        </header>
+
+        <main>
+            <!-- Step 1: Import -->
+            <section class="card" id="import-section">
+                <h2>Step 1: Import Your Writing</h2>
+                <p>Upload emails, documents, or text files to analyze your writing style.</p>
+
+                <form id="import-form">
+                    <div class="form-group">
+                        <label for="file-input">Choose File</label>
+                        <input type="file" id="file-input" name="file" accept=".csv,.txt,.json,.md" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file-type">File Type</label>
+                        <select id="file-type" name="file_type">
+                            <option value="auto">Auto-detect</option>
+                            <option value="email">Email CSV</option>
+                            <option value="text">Text/Markdown</option>
+                            <option value="json">JSON</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile-name">Profile Name (optional)</label>
+                        <input type="text" id="profile-name" name="name" placeholder="My Professional Voice">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description (optional)</label>
+                        <input type="text" id="description" name="description" placeholder="Work emails 2020-2024">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Import & Analyze</button>
+                </form>
+
+                <div id="import-status" class="status hidden"></div>
+            </section>
+
+            <!-- Step 2: View Patterns -->
+            <section class="card" id="patterns-section">
+                <h2>Step 2: Your Voice Patterns</h2>
+                <p>Select a voice pattern to generate a prompt.</p>
+
+                <div id="patterns-list" class="patterns-list">
+                    <p class="empty-state">No voice patterns yet. Import your writing above.</p>
+                </div>
+
+                <button id="refresh-patterns" class="btn btn-secondary">Refresh Patterns</button>
+            </section>
+
+            <!-- Step 3: Generate Prompt -->
+            <section class="card hidden" id="generate-section">
+                <h2>Step 3: Generate Prompt</h2>
+                <p>Choose a context for your AI prompt.</p>
+
+                <form id="generate-form">
+                    <input type="hidden" id="selected-pattern-id" name="pattern_id">
+
+                    <div class="form-group">
+                        <label for="context">Context</label>
+                        <select id="context" name="context">
+                            <option value="professional">Professional (emails, work communication)</option>
+                            <option value="casual">Casual (personal messages, social)</option>
+                            <option value="creative">Creative (writing, storytelling)</option>
+                            <option value="technical">Technical (code, documentation)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Generate Prompt</button>
+                </form>
+
+                <div id="generate-status" class="status hidden"></div>
+            </section>
+
+            <!-- Step 4: View & Copy Prompt -->
+            <section class="card hidden" id="result-section">
+                <h2>🎉 Your AI Voice Prompt</h2>
+                <p>Copy this prompt and paste it into Claude, ChatGPT, or any AI assistant.</p>
+
+                <div class="prompt-container">
+                    <pre id="prompt-text" class="prompt-text"></pre>
+                </div>
+
+                <div class="button-group">
+                    <button id="copy-prompt" class="btn btn-primary">Copy to Clipboard</button>
+                    <button id="download-prompt" class="btn btn-secondary">Download as .txt</button>
+                </div>
+
+                <div id="copy-status" class="status hidden"></div>
+            </section>
+
+            <!-- Privacy Info -->
+            <section class="card card-secondary">
+                <h3>🔒 Privacy First</h3>
+                <p><strong>Your original content is NEVER stored.</strong></p>
+                <p>We only extract linguistic patterns (word frequencies, sentence length, style markers). Your actual text stays private.</p>
+                <button id="view-privacy" class="btn btn-link">View Privacy Report</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Atlas Voice v1.0 • <a href="https://github.com/Khamel83/atlas-voice">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

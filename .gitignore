@@ -32,3 +32,20 @@ logs/
 *_key
 *_secret
 *_token
+
+# Data (privacy - never commit actual data!)
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.csv
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+build/
+dist/
+*.egg-info/
